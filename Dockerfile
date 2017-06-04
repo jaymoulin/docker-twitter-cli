@@ -1,6 +1,6 @@
-FROM resin/rpi-raspbian
+FROM ctarwater/armhf-alpine-rpi-base
 
-RUN apt-get update && apt-get install build-essential ruby-dev ruby make gcc -y && gem install t
+RUN apk update && apk add ruby-dev ruby ruby-rdoc ruby-irb make g++ && gem install t
 
 CMD ["-"]
 ENTRYPOINT ["t"]
