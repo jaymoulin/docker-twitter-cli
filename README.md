@@ -20,7 +20,7 @@ Configuration
 First, you need to authenticate to twitter with the following command: 
 
 ```
-docker run -ti --rm -v /path/to/authkey:/root/.trc jaymoulin/rpi-twitter-cli authorize
+docker run -ti --rm -v /path/to/authkey/folder:/root jaymoulin/rpi-twitter-cli authorize
 ```
 
 Then, follow the displayed instructions.
