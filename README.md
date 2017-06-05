@@ -29,7 +29,7 @@ When done, you should be able to execute [Sferik's T (Twitter CLI client)](https
 
 
 ```
-docker run -ti --rm -v /path/to/authkey:/root/.trc jaymoulin/rpi-twitter-cli <command>
+docker run -ti --rm -v /path/to/authkey/folder:/root jaymoulin/rpi-twitter-cli <command>
 
 ```
 
