@@ -4,6 +4,8 @@ Raspberry Pi - Docker Image - Twitter CLI Client
 =====================================
 
 [![latest release](https://img.shields.io/github/release/jaymoulin/docker-rpi-twitter-cli.svg "latest release")](http://github.com/jaymoulin/docker-rpi-twitter-cli/releases)
+[![Bitcoin donation](https://github.com/jaymoulin/jaymoulin.github.io/raw/master/btc.png "Bitcoin donation")](https://m.freewallet.org/id/374ad82e/btc)
+[![Litecoin donation](https://github.com/jaymoulin/jaymoulin.github.io/raw/master/ltc.png "Litecoin donation")](https://m.freewallet.org/id/374ad82e/ltc)
 
 This program allows you to use Twitter in CLI on your Raspberry PI through Docker technology
 
