@@ -1,4 +1,4 @@
-FROM ctarwater/armhf-alpine-rpi-base
+FROM alpine
 
 MAINTAINER Jay MOULIN <jaymoulin@gmail.com>
 
