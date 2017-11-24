@@ -3,13 +3,13 @@
 Raspberry Pi - Docker Image - Twitter CLI Client
 =====================================
 
-[![latest release](https://img.shields.io/github/release/jaymoulin/docker-rpi-twitter-cli.svg "latest release")](http://github.com/jaymoulin/docker-rpi-twitter-cli/releases)
-[![Docker Pulls](https://img.shields.io/docker/pulls/jaymoulin/rpi-twitter-cli.svg)](https://hub.docker.com/r/jaymoulin/rpi-twitter-cli/)
-[![Docker Stars](https://img.shields.io/docker/stars/jaymoulin/rpi-twitter-cli.svg)](https://hub.docker.com/r/jaymoulin/rpi-twitter-cli/)
+[![latest release](https://img.shields.io/github/release/jaymoulin/docker-twitter-cli.svg "latest release")](http://github.com/jaymoulin/docker-twitter-cli/releases)
+[![Docker Pulls](https://img.shields.io/docker/pulls/jaymoulin/twitter-cli.svg)](https://hub.docker.com/r/jaymoulin/twitter-cli/)
+[![Docker Stars](https://img.shields.io/docker/stars/jaymoulin/twitter-cli.svg)](https://hub.docker.com/r/jaymoulin/twitter-cli/)
 [![Bitcoin donation](https://github.com/jaymoulin/jaymoulin.github.io/raw/master/btc.png "Bitcoin donation")](https://m.freewallet.org/id/374ad82e/btc)
 [![Litecoin donation](https://github.com/jaymoulin/jaymoulin.github.io/raw/master/ltc.png "Litecoin donation")](https://m.freewallet.org/id/374ad82e/ltc)
 [![PayPal donation](https://github.com/jaymoulin/jaymoulin.github.io/raw/master/ppl.png "PayPal donation")](https://www.paypal.me/jaymoulin)
-[![Beerpay donation](https://beerpay.io/jaymoulin/docker-rpi-twitter-cli/badge.svg "Beerpay donation")](https://beerpay.io/jaymoulin/docker-rpi-twitter-cli)
+[![Beerpay donation](https://beerpay.io/jaymoulin/docker-twitter-cli/badge.svg "Beerpay donation")](https://beerpay.io/jaymoulin/docker-twitter-cli)
 
 
 This program allows you to use Twitter in CLI on your Raspberry PI through Docker technology
@@ -19,7 +19,7 @@ This work is based upon [Sferik's T (Twitter CLI client)](https://github.com/sfe
 Submitting bugs and feature requests
 ------------------------------------
 
-Bugs and feature request are tracked on GitHub [Issues](https://github.com/jaymoulin/docker-rpi-twitter-cli)
+Bugs and feature request are tracked on GitHub [Issues](https://github.com/jaymoulin/docker-twitter-cli)
 
 Configuration
 -------------
@@ -27,7 +27,7 @@ Configuration
 First, you need to authenticate to twitter with the following command: 
 
 ```
-docker run -ti --rm -v /path/to/authkey/folder:/root jaymoulin/rpi-twitter-cli authorize
+docker run -ti --rm -v /path/to/authkey/folder:/root jaymoulin/twitter-cli authorize
 ```
 
 Then, follow the displayed instructions.
@@ -36,14 +36,14 @@ When done, you should be able to execute [Sferik's T (Twitter CLI client)](https
 
 
 ```
-docker run -ti --rm -v /path/to/authkey/folder:/root jaymoulin/rpi-twitter-cli <command>
+docker run -ti --rm -v /path/to/authkey/folder:/root jaymoulin/twitter-cli <command>
 
 ```
 
 For example:
 
 ```
-docker run -ti --rm -v ~/.trc:/root/.trc jaymoulin/rpi-twitter-cli whois moulinjay
+docker run -ti --rm -v ~/.trc:/root/.trc jaymoulin/twitter-cli whois moulinjay
 ```
 
 Should give you something like :
@@ -64,7 +64,7 @@ URL          http://jaymoulin.github.io
 Appendixes
 ---
 
-### Install RaspberryPi Docker
+### Install Docker
 
 If you don't have Docker installed yet, you can do it easily in one line using this command
  
