@@ -1,7 +1,7 @@
 ![logo](logo.png)
 
-Raspberry Pi - Docker Image - Twitter CLI Client
-=====================================
+Docker Image (Multiarch) - Twitter CLI Client
+=============================================
 
 [![latest release](https://img.shields.io/github/release/jaymoulin/docker-twitter-cli.svg "latest release")](http://github.com/jaymoulin/docker-twitter-cli/releases)
 [![Docker Pulls](https://img.shields.io/docker/pulls/jaymoulin/twitter-cli.svg)](https://hub.docker.com/r/jaymoulin/twitter-cli/)
@@ -9,10 +9,8 @@ Raspberry Pi - Docker Image - Twitter CLI Client
 [![Bitcoin donation](https://github.com/jaymoulin/jaymoulin.github.io/raw/master/btc.png "Bitcoin donation")](https://m.freewallet.org/id/374ad82e/btc)
 [![Litecoin donation](https://github.com/jaymoulin/jaymoulin.github.io/raw/master/ltc.png "Litecoin donation")](https://m.freewallet.org/id/374ad82e/ltc)
 [![PayPal donation](https://github.com/jaymoulin/jaymoulin.github.io/raw/master/ppl.png "PayPal donation")](https://www.paypal.me/jaymoulin)
-[![Beerpay donation](https://beerpay.io/jaymoulin/docker-twitter-cli/badge.svg "Beerpay donation")](https://beerpay.io/jaymoulin/docker-twitter-cli)
 
-
-This program allows you to use Twitter in CLI on your Raspberry PI through Docker technology
+This program allows you to use Twitter in CLI through Docker technology
 
 This work is based upon [Sferik's T (Twitter CLI client)](https://github.com/sferik/t).
 
