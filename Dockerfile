@@ -1,8 +1,4 @@
-FROM ruby:alpine3.6 as builder
-
-COPY qemu-aarch64-static /usr/bin/
-
-FROM builder
+FROM ruby:alpine3.6
 
 MAINTAINER Jay MOULIN <jaymoulin@gmail.com>
 
