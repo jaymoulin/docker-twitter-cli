@@ -6,6 +6,12 @@ manifests:
       architecture: arm64
       os: linux
   -
+    image: jaymoulin/twitter-cli:$VERSION-arm64v8
+    platform:
+      architecture: arm
+      variant: v8
+      os: linux
+  -
     image: jaymoulin/twitter-cli:$VERSION-arm32v6
     platform:
       architecture: arm
