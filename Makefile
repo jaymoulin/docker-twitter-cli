@@ -1,19 +1,12 @@
-VERSION ?= 0.3.0
+VERSION ?= 0.3.1
 CACHE ?= --no-cache=1
 FULLVERSION ?= ${VERSION}
-archs ?= i386 amd64
-archsarm ?= arm64v8
+archs ?= i386 amd64 arm64v8
 
-.PHONY: all build buildarm publish latest publish-manifest
+.PHONY: all build publish latest publish-manifest
 amd: build publish
-arm: buildarm publish
 build: 
 	$(foreach arch,$(archs), \
-		cat Dockerfile | sed "s/FROM ruby:alpine/FROM ${arch}\/ruby:alpine/g" > .Dockerfile; \
-		docker build -t jaymoulin/twitter-cli:${VERSION}-$(arch) -f .Dockerfile ${CACHE} .;\
-	)
-buildarm:
-	$(foreach arch,$(archsarm), \
 		cat Dockerfile | sed "s/FROM ruby:alpine/FROM ${arch}\/ruby:alpine/g" > .Dockerfile; \
 		docker build -t jaymoulin/twitter-cli:${VERSION}-$(arch) -f .Dockerfile ${CACHE} .;\
 	)
