@@ -1,6 +1,6 @@
-FROM ruby:alpine3.6
+FROM ruby:alpine3.9
 
-MAINTAINER Jay MOULIN <jaymoulin@gmail.com>
+LABEL maintainer="Jay MOULIN <jaymoulin@gmail.com>"
 
 RUN apk add make g++ --update --virtual .build-deps --no-cache && gem install t && apk del make --purge .build-deps
 
