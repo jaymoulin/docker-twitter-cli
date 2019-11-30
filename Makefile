@@ -1,14 +1,18 @@
 VERSION ?= 0.3.1
 CACHE ?= --no-cache=1
 FULLVERSION ?= ${VERSION}
-archs ?= i386 amd64 arm64v8
+archs ?= i386 amd64 arm64v8 arm32v6
 
 .PHONY: all build publish latest publish-manifest
 amd: build publish
-build: 
+qemu-arm-static:
+	cp /usr/bin/qemu-arm-static .
+qemu-aarch64-static:
+	cp /usr/bin/qemu-aarch64-static .
+build: qemu-aarch64-static qemu-arm-static
 	$(foreach arch,$(archs), \
 		cat Dockerfile | sed "s/FROM ruby:alpine/FROM ${arch}\/ruby:alpine/g" > .Dockerfile; \
-		docker build -t jaymoulin/twitter-cli:${VERSION}-$(arch) -f .Dockerfile ${CACHE} .;\
+		docker build -t jaymoulin/twitter-cli:${VERSION}-$(arch) -f .Dockerfile --build-arg VERSION=${VERSION} ${CACHE} .;\
 	)
 publish:
 	docker push jaymoulin/twitter-cli
