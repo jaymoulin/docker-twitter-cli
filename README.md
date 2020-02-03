@@ -11,6 +11,9 @@ Docker Image (Multiarch) - Twitter CLI Client
 [![Buy me a coffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png "Buy me a coffee")](https://www.buymeacoffee.com/3Yu8ajd7W)
 [![Become a Patron](https://badgen.net/badge/become/a%20patron/F96854 "Become a Patron")](https://patreon.com/femtopixel)
 
+
+THIS REPOSITORY IS AUTO-UPDATED BY [GITHUB-RELEASE-NOTIFIER](https://github.com/femtopixel/github-release-notifier) (https://github.com/femtopixel/github-release-notifier)
+
 This program allows you to use Twitter in CLI through Docker technology
 
 This work is based upon [Sferik's T (Twitter CLI client)](https://github.com/sferik/t).
