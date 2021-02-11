@@ -15,7 +15,7 @@ build: qemu-aarch64-static qemu-arm-static
 		docker build -t jaymoulin/twitter-cli:${VERSION}-$(arch) -f .Dockerfile --build-arg VERSION=${VERSION} ${CACHE} .;\
 	)
 publish:
-	docker push jaymoulin/twitter-cli
+	docker push jaymoulin/twitter-cli -a
 publish-manifest:
 	cat manifest.yml | sed "s/\$$VERSION/${VERSION}/g" > manifest.yaml
 	cat manifest.yaml | sed "s/\$$FULLVERSION/${FULLVERSION}/g" > manifest2.yaml
