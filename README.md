@@ -28,7 +28,8 @@ Bugs and feature request are tracked on GitHub [Issues](https://github.com/jaymo
 Configuration
 -------------
 
-First, you need to authenticate to twitter with the following command: 
+First, you need to authenticate to twitter with the following command:
+Please note that this package is also hosted on Github Container Registry, just add `ghcr.io/` before the image name (`docker pull ghcr.io/jaymoulin/twitter-cli` instead of `jaymoulin/twitter-cli`)
 
 ```
 docker run -ti --rm -v /path/to/authkey/folder:/root jaymoulin/twitter-cli authorize

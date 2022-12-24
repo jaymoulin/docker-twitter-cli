@@ -1,4 +1,4 @@
-FROM ruby:alpine3.9
+FROM ruby:alpine
 
 ARG VERSION=v3.1.0
 LABEL maintainer="Jay MOULIN <jaymoulin@gmail.com>"
