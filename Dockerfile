@@ -1,6 +1,6 @@
 FROM ruby:alpine
 
-ARG VERSION=v4.0.0
+ARG VERSION=v4.1.1
 LABEL maintainer="Jay MOULIN <jaymoulin@gmail.com>"
 LABEL version="${VERSION}"
 
