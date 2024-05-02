@@ -1,29 +1,9 @@
 VERSION ?= v4.1.1
 CACHE ?= --no-cache=1
-FULLVERSION ?= v4.1.1
-archs ?= i386 amd64 arm64v8 arm32v6
-
-.PHONY: all build publish latest publish-manifest
-amd: build publish
-qemu-arm-static:
-	cp /usr/bin/qemu-arm-static .
-qemu-aarch64-static:
-	cp /usr/bin/qemu-aarch64-static .
-build: qemu-aarch64-static qemu-arm-static
-	$(foreach arch,$(archs), \
-		cat Dockerfile | sed "s/FROM ruby:alpine/FROM ${arch}\/ruby:alpine/g" > .Dockerfile; \
-		docker build -t jaymoulin/twitter-cli:${VERSION}-$(arch) -t ghcr.io/jaymoulin/twitter-cli:${VERSION}-$(arch) -f .Dockerfile --build-arg VERSION=${VERSION} ${CACHE} .;\
-	)
+.PHONY: all build publish
+all: build publish
+build:
+	docker buildx build --platform linux/arm/v7,linux/arm64/v8,linux/amd64,linux/arm/v6,linux/386 ${PUSH} --build-arg VERSION=${VERSION} --tag jaymoulin/twitter-cli --tag jaymoulin/twitter-cli:${VERSION} ${CACHE} .
 publish:
-	docker push jaymoulin/twitter-cli -a
-	docker push ghcr.io/jaymoulin/twitter-cli -a
-publish-manifest:
-	cat manifest.yml | sed "s/\$$VERSION/${VERSION}/g" > manifest.yaml
-	cat manifest.yaml | sed "s/\$$FULLVERSION/${FULLVERSION}/g" > manifest2.yaml
-	mv manifest2.yaml manifest.yaml
-	manifest-tool push from-spec manifest.yaml
-	cat manifest.yaml | sed "s/jaymoulin/ghcr.io\/jaymoulin/g" > manifest2.yaml
-	mv manifest2.yaml manifest.yaml
-	manifest-tool push from-spec manifest.yaml
-latest:
-	FULLVERSION=latest VERSION=${VERSION} make publish-manifest
+	PUSH=--push CACHE= make build
+
